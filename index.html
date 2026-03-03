@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BikeShare Data Dashboard (Chart.js Lab)</title>
+  <title>Climate Data Dashboard (Chart.js Lab)</title>
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Chart.js via CDN (official docs recommend CDN options like jsDelivr) -->
@@ -14,7 +14,7 @@
   <header class="container">
     <h1>BikeShare Data Dashboard</h1>
     <p class="sub">
-      Build charts from real-ish city data. Start with Bar + Line, then pick an extension chart.
+      Build charts from real-ish climate data. Start with Bar + Line, then pick an extension chart.
     </p>
   </header>
 
@@ -24,7 +24,7 @@
 
       <label class="label">Chart</label>
       <select id="chartType">
-        <option value="bar" selected>Bar (compare neighborhoods)</option>
+        <option value="bar" selected>Bar (compare average temperature)</option>
         <option value="line">Line (trend over time)</option>
         <option value="scatter">Scatter (relationship)</option>
         <option value="doughnut">Doughnut (parts of whole)</option>
@@ -34,17 +34,17 @@
       <label class="label">Month</label>
       <select id="monthSelect"></select>
 
-      <label class="label">Neighborhood</label>
-      <select id="hoodSelect"></select>
+      <label class="label">City</label>
+      <select id="citySelect"></select>
 
       <label class="label">Metric</label>
       <select id="metricSelect">
-        <option value="trips" selected>Trips</option>
-        <option value="revenueUSD">Revenue (USD)</option>
-        <option value="avgDurationMin">Avg Duration (min)</option>
-        <option value="incidents">Incidents</option>
-        <option value="tempC">Temperature (C)</option>
-        <option value="precipMM">Precipitation (mm)</option>
+        <option value="avgTempC" selected>Average Temperature</option>
+        <option value="minTempC">Minimum Temperature (C)</option>
+        <option value="maxTempC">Maximum Temperature (C)</option>
+        <option value="precipMM">Precipitation (MM)</option>
+        <option value="humidityPct">Humidity (Pct)</option>
+        <option value="windKph">Wind Speed (KPH)</option>
       </select>
 
       <button id="renderBtn">Render Chart</button>
